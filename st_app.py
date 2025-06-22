@@ -7,7 +7,7 @@ from utils.pr_info_extractor import extract_azure_pr_info
 st.title("Azure PR Reviewer")
 
 # Input Fields
-pr_link = st.text_input("🔗 Pull Request Link", "")
+pr_link = st.text_input("🔗 Pull Request Link", type="password", placeholder="https://dev.azure.com/<organization>/<project_name>/_git/<repository>/pullrequest/<pr_id>")
 personal_access_token = st.text_input("🔐 Personal Access Token", type="password")
 code_option = st.radio("🧠 Code Extraction Mode", ["Full code", "Only code changes"])
 
